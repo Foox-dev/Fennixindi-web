@@ -6,17 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FennixIndi | StormTides</title>
 
-  <link rel="shortcut icon" href="theimages/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="theimages/logo.png" type="image/x-icon">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+    body {
+      background-image: url('theimages/backgrounds/trees-bg.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  </style>
+
+    <style>
+      @font-face { font-family: SPR; src: url('assets/EightBitDragon.ttf'); } 
+      h1 {
+         font-family: SPR
+      }
+    </style>
+  
+  
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */
-    body {
-      background-image: url('theimages/abwall2.png');
-      Stop with the stolen art
-    }
+
 
     .navbar {
       margin-bottom: 0;
@@ -56,15 +71,17 @@
           <span class="icon-bar"></span>
         </button>
 
-        <a class="navbar-brand" href="#">FennixIndi</a>
+        <a class="navbar-brand" style="font-family:SPR" href="#">FennixIndi</a>
 
       </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
+      <div class="collapse navbar-collapse" id="myNavbar" style="font-family:SPR">
         <ul class="nav navbar-nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="board.html">Board</a></li>
-          <li><a href="games.html">Games</a></li>
+          <li class="#"><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+          <li class="#"><a href="about.html"><span class="glyphicon glyphicon-inbox"></span> About</a></li>
+          <li class="#"><a href="board.html"><span class="glyphicon glyphicon-signal"></span> Board</a></li>
+          <li class="active"><a href="games.html"><span class="glyphicon glyphicon-tag"></span> Games</a></li>
+          <li><a href="projects.html"><span class="glyphicon glyphicon-globe"></span> Projects</a></li>
+          <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
         </ul>
       </div>
     </div>
@@ -75,7 +92,7 @@
     <div>
 
       <div>
-        <img src="theimages/stormtides-poster.png" alt="stormtides-logo" width="429" height="568">
+        <img src="theimages/game-art/stormtides-poster.png" alt="stormtides-logo" width="429" height="568">
       </div>
 
       <section>
@@ -83,7 +100,7 @@
         <style>
           /* Style The Dropdown Button */
           .dropbtn {
-            background-color: #808080;
+            background-color: #2B2B2B;
             color: white;
             padding: 16px;
             font-size: 16px;
@@ -101,7 +118,7 @@
           .dropdown-content {
             display: none;
             position: absolute;
-            background-color: #f0f0f0;
+            background-color: #808080;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1;
@@ -117,7 +134,7 @@
 
           /* Change color of dropdown links on hover */
           .dropdown-content a:hover {
-            background-color: #808080
+            background-color: #525252
           }
 
           /* Show the dropdown menu on hover */
@@ -127,14 +144,15 @@
 
           /* Change the background color of the dropdown button when the dropdown content is shown */
           .dropdown:hover .dropbtn {
-            background-color: #000000;
+            background-color: #313131;
           }
         </style>
 
-        <div style="float: right;">
+        <div style="float: center;">
           <div class="dropdown">
             <button class="dropbtn">
-              <h3>Digital Product Detailed Description</h3>
+              <h3 style="font-family:SPR">Digital Product 
+Description</h3>
             </button>
             <div class="dropdown-content">
               <a>Welcome to StormTides, an open world RPG that will keep you captivated for hours on end. From the
@@ -147,7 +165,8 @@
               <a>Of course, no RPG would be complete without a vast array of customization options. You'll be able to
                 choose from a wide variety of armor and weapons, and you can even customize your character's appearance
                 to suit your own personal taste.</a>
-              <a>So come on in and explore the world of StormTides! We guarantee you won't be disappointed.</a>
+              <a>So come on in and explore the world of StormTides! We guarantee you won't be disappointed.</a><a>
+              </a>
             </div>
           </div>
 
@@ -157,7 +176,7 @@
     </section>
   </div>
 
-  <div style="height:80%;width:60.2%;overflow;border:0px solid #161616;float: right">
+  <div class="semi-transparent-box" style="height:80%;width:60.2%;overflow;border:0px solid #161616;float: right">
     <strong>
       <h1>
         <ul>
@@ -170,7 +189,7 @@
                       <ul>
                         <ul>
                           <ul>
-                            <ul style="color: #000000">Product Price: $6.99 USD</ul>
+                            <ul style="color: #ffffff">Product Price: $6.99 USD</ul>
                           </ul>
                         </ul>
                       </ul>
@@ -185,7 +204,13 @@
       </h1>
     </strong>
   </div>
-
+  <style>
+    .semi-transparent-box {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      color: white;
+    }
+  </style>
 
 </body>
 

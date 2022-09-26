@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FennixIndi | Games</title>
 
-  <link rel="shortcut icon" href="theimages/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="theimages/logo.png" type="image/x-icon">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -14,9 +14,19 @@
 
   <style>
     body {
-      background-image: url('theimages/backgrounds/games-bg.png');
+      background-image: url('theimages/backgrounds/trees-bg.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
     }
   </style>
+
+    <style>
+      @font-face { font-family: SPR; src: url('assets/EightBitDragon.ttf'); } 
+      h1 {
+         font-family: SPR
+      }
+    </style>
 
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */
@@ -58,15 +68,16 @@
           <span class="icon-bar"></span>
         </button>
 
-        <a class="navbar-brand" href="#">FennixIndi</a>
+        <a class="navbar-brand" style="font-family:SPR" href="#">FennixIndi</a>
 
       </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
+      <div class="collapse navbar-collapse" id="myNavbar" style="font-family:SPR">
         <ul class="nav navbar-nav">
           <li class="#"><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
           <li class="#"><a href="about.html"><span class="glyphicon glyphicon-inbox"></span> About</a></li>
           <li class="#"><a href="board.html"><span class="glyphicon glyphicon-signal"></span> Board</a></li>
           <li class="active"><a href="#"><span class="glyphicon glyphicon-tag"></span> Games</a></li>
+                              <li><a href="projects.html"><span class="glyphicon glyphicon-globe"></span> Projects</a></li>
 
           <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
         </ul>
@@ -80,11 +91,11 @@
       <center>
         <div class="row">
           <div class="col-sm-4">
-            <a href="storm.html"><img src="theimages/stormtides.gif" class="img-responsive" style="width:100%"
+            <a href="storm.html"><img src="theimages/game-art/stormtides.gif" class="img-responsive" style="width:100%"
                 alt=""></a>
           </div>
           <div class="col-sm-4">
-            <img src="theimages/imperium.gif" class="img-responsive" style="width:100%" alt="">
+            <img src="theimages/game-art/imperium.gif" class="img-responsive" style="width:100%" alt="">
           </div>
         </div>
       </center>
