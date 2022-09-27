@@ -27,7 +27,7 @@
           amount: 0,
           cost: 300,
           gps: 0,
-          name: "+ 1 Pickle Per Click"
+          name: "Click Multiplier"
         },
         pickler_machine: {
           amount: 0,
@@ -58,8 +58,24 @@
           cost: 3000,
           gps: 5,
           name: "Picklers Insomnia"
-        }
-      }
+        },
+        pickle_pit: {
+          amount: 0,
+          cost: 5500,
+          gps: 10,
+          name: "Pickle Pit  "
+        },
+        corrupted_pickle: {
+          amount: 0,
+          cost: 10000,
+          gps: 35,
+          name: "Corrupted Pickle"
+        },
+      },
+      achievements: [{req: "clicker.pickles>=1", gotten: false, title: "A Big Mistake", text: "Play Pickle Clicker."},
+      {req: "clicker.pickles>=1000", gotten: false, title: "Now It Begins...", text: "Get 1000 Pickles."},
+      {req: "clicker.pickles>=5000", gotten: false, title: "Pickle Priest", text: "Get 5000 Pickles"},
+      {req: "clicker.upgrades.picklers_insomnia.amount>=1", gotten: false, title: "Insomniac", text: "Buy Pickle Insomnia."}]
     };
     function pickle_clicked(thing) {
       if (clicker.upgrades[thing].cost <= clicker.pickles) {
@@ -88,12 +104,20 @@
     function updatecount() {
       update_upgrades();
       setInterval(() => {
+        for (i in clicker.achievements) {
+          var x = new Function('return ' + clicker.achievements[i].req);
+          if (x() && !clicker.achievements[i].gotten) {
+            clicker.achievements[i].gotten = true;
+            document.querySelector("#achievements").innerHTML += `<br>ACHIEVEMENT UNLOCKED:<br>${clicker.achievements[i].title}<br>${clicker.achievements[i].text}<br>`;
+          }
+        }
         for (i in clicker.upgrades) {
           clicker.pickles += clicker.upgrades[i].amount * clicker.upgrades[i].gps / 20;
         }
         document.querySelector("#pickles").innerHTML = "You have " + String(clicker.pickles).split(".")[0] + " Pickles";
       }, 50);
     }
+
   </script>
 
 
@@ -189,8 +213,12 @@
 
       </div>
     </div>
+    <center>
+      <br>
+      <div id="achievements" align="center"
+        style="width: 400px; height: 500px; overflow: scrollw; color: #ffffff; top; 100%"></div>
   </body>
-
+  </center>
 
 </body>
 
