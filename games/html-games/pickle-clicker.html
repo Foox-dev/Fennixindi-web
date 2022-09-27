@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pickle Clicker</title>
+
+  <link rel="shortcut icon" href="/games/game-art/pickles/pickle-fav.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
+  <script>
+    var clicker = {
+      pickles: 0,
+      avg: 0,
+      click_pickle: 1,
+      upgrades: {
+        pickle_skills: {
+          amount: 0,
+          cost: 300,
+          gps: 0,
+          name: "+ 1 Pickle Per Click"
+        },
+        pickler_machine: {
+          amount: 0,
+          cost: 100,
+          gps: 0.25,
+          name: "Extra Picklers"
+        },
+        pickler_monkey: {
+          amount: 0,
+          cost: 300,
+          gps: 1,
+          name: "Pickler Monkey"
+        },
+        pickler_plat: {
+          amount: 0,
+          cost: 500,
+          gps: 2,
+          name: "Pickle Plantation"
+        },
+        pickler_factory: {
+          amount: 0,
+          cost: 1500,
+          gps: 3.25,
+          name: "Pickling Factory"
+        },
+        picklers_insomnia: {
+          amount: 0,
+          cost: 3000,
+          gps: 5,
+          name: "Picklers Insomnia"
+        }
+      }
+    };
+    function pickle_clicked(thing) {
+      if (clicker.upgrades[thing].cost <= clicker.pickles) {
+        if ([thing] == 'pickle_skills') {
+          clicker.pickles -= clicker.upgrades.pickle_skills.cost;
+          clicker.upgrades.pickle_skills.amount++;
+          clicker.upgrades[thing].cost += Math.round(clicker.upgrades[thing].cost * 0.15);
+          clicker.click_pickle++
+          update_upgrades();
+        } else {
+          clicker.pickles -= clicker.upgrades[thing].cost;
+          clicker.avg += clicker.upgrades[thing].gps;
+          clicker.upgrades[thing].amount++;
+          clicker.upgrades[thing].cost += Math.round(clicker.upgrades[thing].cost * 0.15);
+          update_upgrades();
+        }
+      }
+    }
+    function update_upgrades() {
+      document.querySelector("#upgrades").innerHTML = "";
+      document.querySelector("#avg_pickle").innerHTML = clicker.avg + " Pickles Per Second";
+      for (i in clicker.upgrades) {
+        document.querySelector("#upgrades").innerHTML += `<br> <button style="color: #000000" onclick="pickle_clicked('${i}')">${clicker.upgrades[i].name}</button> You have ${clicker.upgrades[i].amount} | Cost: ${clicker.upgrades[i].cost}`;
+      }
+    }
+    function updatecount() {
+      update_upgrades();
+      setInterval(() => {
+        for (i in clicker.upgrades) {
+          clicker.pickles += clicker.upgrades[i].amount * clicker.upgrades[i].gps / 20;
+        }
+        document.querySelector("#pickles").innerHTML = "You have " + String(clicker.pickles).split(".")[0] + " Pickles";
+      }, 50);
+    }
+  </script>
+
+
+
+  <style>
+    body {
+      background-color: #1D2419;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  </style>
+
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Add a gray background color with some padding */
+    footer {
+      background-color: #181818;
+      padding: 25px;
+    }
+
+    .carousel-inner img {
+      width: 100%;
+      /* Set width to 100% */
+      margin: auto;
+      min-height: 200px;
+    }
+
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+    @media (max-width: 600px) {
+      .carousel-caption {
+        display: none;
+      }
+
+    }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="index.html">FennixIndi</a>
+
+      </div>
+      <div class=" collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="#"><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+          <li class="#"><a href="about.html"><span class="glyphicon glyphicon-inbox"></span> About</a></li>
+          <li><a href="board.html"><span class="glyphicon glyphicon-signal"></span> Board</a></li>
+          <li><a href="projects.html"><span class="glyphicon glyphicon-globe"></span> Projects</a></li>
+          <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <body onload="updatecount()">
+    <div align="center">
+      <h1 style="color: #ffffff" ;>Pickle Clicker</h1>
+
+      <style>
+        .button {
+          background-color: Transparent;
+          background-repeat: no-repeat;
+          border: none;
+          cursor: pointer;
+          overflow: hidden;
+          padding: 15px 32px;
+        }
+      </style>
+      <h2 id="avg_pickle" style="color: #ffffff" ;>0 Pickles Per Second</h2>
+      <h3 id="pickles" style="color: #ffffff" ;>You have 0 Pickles</h3>
+      <a onclick="clicker.pickles += clicker.click_pickle"><img src="/games/game-art/pickles/pickle.png"
+          class="img-responsive" style="width:30%"></a>
+
+
+      <div id="upgrades" style="color: #ffffff">
+
+      </div>
+    </div>
+  </body>
+
+
+</body>
+
+</html>
