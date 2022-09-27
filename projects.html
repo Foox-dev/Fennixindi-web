@@ -21,12 +21,67 @@
     }
   </style>
 
-    <style>
-      @font-face { font-family: SPR; src: url('assets/EightBitDragon.ttf'); } 
-      h1 {
-         font-family: SPR
-      }
-    </style>
+  <style>
+    /* Style The Dropdown Button */
+    .dropbtn {
+      background-color: #2B2B2B;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #808080;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+      background-color: #525252
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {
+      background-color: #313131;
+    }
+  </style>
+
+  <style>
+    @font-face {
+      font-family: SPR;
+      src: url('assets/EightBitDragon.ttf');
+    }
+
+    h1 {
+      font-family: SPR
+    }
+  </style>
 
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */
@@ -53,6 +108,8 @@
       .carousel-caption {
         display: none;
       }
+
+
     }
   </style>
 </head>
@@ -83,3 +140,22 @@
       </div>
     </div>
   </nav>
+
+
+  <border>
+    <div class="container text-center">
+      <h3 style="color: #ffffff;"> </h3><br>
+      <div style="height:100%;width:100%;scroll:overflow;border:0px solid #000000">
+        <center>
+          <div class="row">
+            <div class="col-sm-4">
+              <a href="games.html"><img src="games/game-art/our-games.gif" class="img-responsive" style="width:100%"
+                  alt=""></a>
+            </div>
+            <div class="col-sm-4">
+              <img src="games/game-art/imperium.gif" class="img-responsive" style="width:100%" alt="">
+            </div>
+          </div>
+        </center>
+      </div>
+  </border>
