@@ -196,11 +196,25 @@
     </div>
   </nav>
   
+<!--Styling for the basics of the page-->
+<st
+  .float-container {
+    border: 3px solid #fff;
+    padding: 20px;
+}
 
+.float-child {
+    width: 50%;
+    float: left;
+    padding: 20px;
+    border: 2px solid red;
+}  
+  
+<!--End of the basic Stylesheets-->
 
   <div class="float-container">
     
-  <div><div style="height:100%; width:350px; background-color:black;" >
+  <div class="float-child"><div style="height:100%; width:350px; background-color:black;" class="green">
     
             <a href="archive.html"><img src="assets/gif-art/archives.gif" class="img-responsive" style="width:100%"
                 alt=""></a>
@@ -209,8 +223,8 @@
 
   <!--Search bar and overview of projects-->
   
-  <div align="right">
-<div class="search-container">
+  <div align="right" class="float-child">
+<div class="search-container blue">
   <input type="text" placeholder="Search..." name="search" id="searchprojects">
   <button type="submit"><span class="glyphicon glyphicon-search"><i class="fa fa-search"></i></span></button>
 </div>

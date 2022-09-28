@@ -71,8 +71,6 @@
           gps: 35,
           name: "Corrupted Pickle"
         },
-      },
-      upgrades2: {
         spice_mixer: {
           amount: 0,
           cost: 10000,
@@ -121,33 +119,12 @@
           update_upgrades();
         }
       }
-
-      if (clicker.upgrades2[thing].cost <= clicker.pickles) {
-        if ([thing] == 'pickle_skills') {
-          clicker.pickles -= clicker.upgrades2.pickle_skills.cost;
-          clicker.upgrades2.pickle_skills.amount++;
-          clicker.upgrades2[thing].cost += Math.round(clicker.upgrades2[thing].cost * 0.15);
-          clicker.click_pickle++
-          update_upgrades();
-        } else {
-          clicker.pickles -= clicker.upgrades2[thing].cost;
-          clicker.avg += clicker.upgrades2[thing].gps;
-          clicker.upgrades2[thing].amount++;
-          clicker.upgrades2[thing].cost += Math.round(clicker.upgrades2[thing].cost * 0.15);
-          update_upgrades();
-        }
-      }
     }
     function update_upgrades() {
       document.querySelector("#upgrades").innerHTML = "";
-      document.querySelector("#upgrades2").innerHTML = "";
       document.querySelector("#avg_pickle").innerHTML = clicker.avg + " Pickles Per Second";
       for (i in clicker.upgrades) {
         document.querySelector("#upgrades").innerHTML += `<br> <button style="color: #ffffff" onclick="pickle_clicked('${i}')">${clicker.upgrades[i].name}</button> <br>You have ${clicker.upgrades[i].amount} | Cost: ${clicker.upgrades[i].cost}<br>`;
-      }
-
-      for (i in clicker.upgrades2) {
-        document.querySelector("#upgrades2").innerHTML += `<br> <button style="color: #ffffff" onclick="pickle_clicked('${i}')">${clicker.upgrades2[i].name}</button> <br>You have ${clicker.upgrades2[i].amount} | Cost: ${clicker.upgrades2[i].cost}<br>`;
       }
     }
     function updatecount() {
@@ -285,19 +262,12 @@
       <a class="image" onclick="clicker.pickles += clicker.click_pickle"><img src="/games/game-art/pickles/pickle.png"
           class="img-responsive" style="width:30%"></a>
 
-      <left>
-        <div id="upgrades" class="upgrades" style="color: #ffffff" align="left">
-
-        </div>
-      </left>
-
-      <right>
-        <div id="upgrades2" class="upgrades2" style="color: #ffffff; position: absolute; bottom: 15px; right: 16px;"
-          align="right">
-
-        </div>
-      </right>
       <center>
+        <div id="upgrades" class="upgrades" style="color: #ffffff" align="center">
+
+        </div>
+        </left>
+
         <br>
         <div id="achievements" align="center" style="width: 400px; height: 500px; color: #ffffff; top; 100%"></div>
   </body>
