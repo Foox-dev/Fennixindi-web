@@ -79,6 +79,7 @@
       {req: "clicker.upgrades.corrupted_pickle.amount>=1", gotten: false, title: "No Life", text: "Buy a Corrupted Pickle."}]
     };
     function pickle_clicked(thing) {
+      console.log("Pickle Has Been Clicked");
       if (clicker.upgrades[thing].cost <= clicker.pickles) {
         if ([thing] == 'pickle_skills') {
           clicker.pickles -= clicker.upgrades.pickle_skills.cost;
@@ -99,10 +100,11 @@
       document.querySelector("#upgrades").innerHTML = "";
       document.querySelector("#avg_pickle").innerHTML = clicker.avg + " Pickles Per Second";
       for (i in clicker.upgrades) {
-        document.querySelector("#upgrades").innerHTML += `<br> <button style="color: #000000" onclick="pickle_clicked('${i}')">${clicker.upgrades[i].name}</button> You have ${clicker.upgrades[i].amount} | Cost: ${clicker.upgrades[i].cost}`;
+        document.querySelector("#upgrades").innerHTML += `<br> <button style="color: #ffffff" onclick="pickle_clicked('${i}')">${clicker.upgrades[i].name}</button> <br>You have ${clicker.upgrades[i].amount} | Cost: ${clicker.upgrades[i].cost}<br>`;
       }
     }
     function updatecount() {
+      console.log("F");
       update_upgrades();
       setInterval(() => {
         for (i in clicker.achievements) {
@@ -131,6 +133,23 @@
       background-size: cover;
     }
   </style>
+
+  <style>
+
+    .image img {
+      transition: all .1s ease-in-out;
+    }
+    .image img:hover {transform: scale(1.01); }
+
+    .image img:active {transform: scale(0.99); }
+
+    .upgrades button {
+      background: #242424;
+      color: #ffffff;
+      border-radius: 10%;
+    }
+    </style>
+
 
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */
@@ -206,12 +225,12 @@
       </style>
       <h2 id="avg_pickle" style="color: #ffffff" ;>0 Pickles Per Second</h2>
       <h3 id="pickles" style="color: #ffffff" ;>You have 0 Pickles</h3>
-      <a onclick="clicker.pickles += clicker.click_pickle"><img src="/games/game-art/pickles/pickle.png"
-          class="img-responsive" style="width:30%"></a>
+      <a class="image" onclick="clicker.pickles += clicker.click_pickle"><img
+          src="/games/game-art/pickles/pickle.png" class="img-responsive" style="width:30%"></a>
 
 
-      <div id="upgrades" style="color: #ffffff">
-
+      <div id="upgrades" class="upgrades" style="color: #ffffff">
+        
       </div>
     </div>
     <center>
