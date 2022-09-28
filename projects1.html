@@ -20,7 +20,7 @@
 
   <style>
     body {
-      background-image: url('assets/theimages/backgrounds/trees-bg.png');
+      background-color: #272727;
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
@@ -195,47 +195,121 @@
       </div>
     </div>
   </nav>
-  
-<!--Styling for the basics of the page-->
-<st
-  .float-container {
-    border: 3px solid #fff;
-    padding: 20px;
-}
 
-.float-child {
-    width: 50%;
-    float: left;
-    padding: 20px;
-    border: 2px solid red;
-}  
-  
-<!--End of the basic Stylesheets-->
-
-  <div class="float-container">
-    
-  <div class="float-child"><div style="height:100%; width:350px; background-color:black;" class="green">
-    
-            <a href="archive.html"><img src="assets/gif-art/archives.gif" class="img-responsive" style="width:100%"
-                alt=""></a>
-    
-  </div></div>
-
-  <!--Search bar and overview of projects-->
-  
-  <div align="right" class="float-child">
-<div class="search-container blue">
-  <input type="text" placeholder="Search..." name="search" id="searchprojects">
-  <button type="submit"><span class="glyphicon glyphicon-search"><i class="fa fa-search"></i></span></button>
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div class="float1">
+  <div class="container">
+    <div class="search-box">
+      <input type="text" class="search" placeholder="What are you looking for?" id="searchprojects">
+      <button type="submit" class="search-btn">
+        <span class="glyphicon glyphicon-search">
+        <i class="fa fa-search">
+        </i>
+        </span>
+      </button>
+    </div>
+  </div>
 </div>
   
-    <script>
-    document.getElementById("searchprojects").setAttribute('size', '80');
-    </script>
-  </div>
+  <style>
+    .search-box {
+      width: 93%;
+      position: relative;
+    }
+
+    .search {
+      width: 93%;
+      border: 3px solid #fd5e53
+    }
+
+    .float1 {
+      float: right;
+    }
+  </style>
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+  <!--Styling for the basics of the page-->
+
+  <style>
+    .float-container {
+      border: 0px solid #fff;
+      padding: 10px;
+    }
+
+    .float-child1 {
+      width: 50%;
+      float: left;
+      padding: 5px;
+      border: 0px solid red;
+    }
+
+    .float-child2 {
+      width: 50%;
+      float: right;
+      padding: 10px;
+      border: 0px solid red;
+    }
+  </style>
+
+  <!--End of the basic Stylesheets-->
+
+  <div class="float-container">
+
+    <div class="float-child1">
+      <div style="height:100%; width:475px; background-color:black;" class="green">
+
+  <div 
+    id="cf2" class="shadow">
+  <img class="bottom img-responsive" src="codes.png" />
+  <img class="to p img-responsive" src="search.png" />
+</div>
+<p id="cf_onclick">Click me to toggle</p>
+
+      </div>
+    </div>
+
+    <!--Search bar and overview of projects-->
+
+    <div align="right" class="float-child2">
+      <div class="blue">
+        
+      </div>
+    </div>
   </div>
   
-    
+  <!------------------------->
+<style>
+  #cf2 {
+  position:relative;
+  height:281px;
+  width:450px;
+  margin:0 auto;
+}
+#cf2 img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#cf2 img.transparent {
+opacity:0;
+}
+#cf_onclick {
+cursor:pointer;
+}
+</style>
+
+  <script>
+    $(document).ready(function() {
+  $("#cf_onclick").click(function() {
+  $("#cf2 img.top").toggleClass("transparent");
+});
+});
+  </script>
+  <!------------------------->
 </body>
 
 </html>
