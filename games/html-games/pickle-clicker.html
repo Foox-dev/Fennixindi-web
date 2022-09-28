@@ -72,32 +72,32 @@
           name: "Corrupted Pickle"
         },
       },
-        upgrades2: {
-          spice_mixer: {
-            amount: 0,
-            cost: 10000,
-            gps: 40,
-            name: "Spice Mixer"
-          },
-          pickle_empire: {
-            amount: 0,
-            cost: 15500,
-            gps: 50,
-            name: "Pickle Empire"
-          },
-          glowing_salt: {
-            amount: 0,
-            cost: 20000,
-            gps: 60,
-            name: "Glowing Salt"
-          },
-          atomic_vinegar: {
-            amount: 0,
-            cost: 32000,
-            gps: 100,
-            name: "Atomic Vinegar"
-          },
+      upgrades2: {
+        spice_mixer: {
+          amount: 0,
+          cost: 10000,
+          gps: 40,
+          name: "Spice Mixer"
         },
+        pickle_empire: {
+          amount: 0,
+          cost: 15500,
+          gps: 50,
+          name: "Pickle Empire"
+        },
+        glowing_salt: {
+          amount: 0,
+          cost: 20000,
+          gps: 60,
+          name: "Glowing Salt"
+        },
+        atomic_vinegar: {
+          amount: 0,
+          cost: 32000,
+          gps: 100,
+          name: "Atomic Vinegar"
+        },
+      },
       achievements: [{req: "clicker.pickles>=1", gotten: false, title: "A Big Mistake", text: "Play Pickle Clicker."},
       {req: "clicker.pickles>=1000", gotten: false, title: "Now It Begins...", text: "Get 1000 Pickles."},
       {req: "clicker.pickles>=5000", gotten: false, title: "Pickle Priest", text: "Get 5000 Pickles"},
@@ -118,6 +118,22 @@
           clicker.avg += clicker.upgrades[thing].gps;
           clicker.upgrades[thing].amount++;
           clicker.upgrades[thing].cost += Math.round(clicker.upgrades[thing].cost * 0.15);
+          update_upgrades();
+        }
+      }
+
+      if (clicker.upgrades2[thing].cost <= clicker.pickles) {
+        if ([thing] == 'pickle_skills') {
+          clicker.pickles -= clicker.upgrades2.pickle_skills.cost;
+          clicker.upgrades2.pickle_skills.amount++;
+          clicker.upgrades2[thing].cost += Math.round(clicker.upgrades2[thing].cost * 0.15);
+          clicker.click_pickle++
+          update_upgrades();
+        } else {
+          clicker.pickles -= clicker.upgrades2[thing].cost;
+          clicker.avg += clicker.upgrades2[thing].gps;
+          clicker.upgrades2[thing].amount++;
+          clicker.upgrades2[thing].cost += Math.round(clicker.upgrades2[thing].cost * 0.15);
           update_upgrades();
         }
       }
@@ -166,25 +182,30 @@
   </style>
 
   <style>
-
     .image img {
       transition: all .1s ease-in-out;
     }
-    .image img:hover {transform: scale(1.01); }
 
-    .image img:active {transform: scale(0.99); }
+    .image img:hover {
+      transform: scale(1.01);
+    }
+
+    .image img:active {
+      transform: scale(0.99);
+    }
 
     .upgrades button {
       background: #242424;
       color: #ffffff;
       border-radius: 10%;
     }
+
     .upgrades2 button {
       background: #242424;
       color: #ffffff;
       border-radius: 10%;
     }
-    </style>
+  </style>
 
 
   <style>
@@ -261,23 +282,24 @@
       </style>
       <h2 id="avg_pickle" style="color: #ffffff" ;>0 Pickles Per Second</h2>
       <h3 id="pickles" style="color: #ffffff" ;>You have 0 Pickles</h3>
-      <a class="image" onclick="clicker.pickles += clicker.click_pickle"><img
-          src="/games/game-art/pickles/pickle.png" class="img-responsive" style="width:30%"></a>
+      <a class="image" onclick="clicker.pickles += clicker.click_pickle"><img src="/games/game-art/pickles/pickle.png"
+          class="img-responsive" style="width:30%"></a>
 
-<left>
-      <div id="upgrades" class="upgrades" style="color: #ffffff" align="left">
-        
-      </div>
-  </left>
+      <left>
+        <div id="upgrades" class="upgrades" style="color: #ffffff" align="left">
 
-<right>
-      <div id="upgrades2" class="upgrades2" style="color: #ffffff; position: absolute; bottom: 15px; right: 16px;" align="right" >
-      </div>
-  </right>
-    <center>
-      <br>
-      <div id="achievements" align="center"
-        style="width: 400px; height: 500px; color: #ffffff; top; 100%"></div>
+        </div>
+      </left>
+
+      <right>
+        <div id="upgrades2" class="upgrades2" style="color: #ffffff; position: absolute; bottom: 15px; right: 16px;"
+          align="right">
+
+        </div>
+      </right>
+      <center>
+        <br>
+        <div id="achievements" align="center" style="width: 400px; height: 500px; color: #ffffff; top; 100%"></div>
   </body>
   </center>
 

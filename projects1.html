@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FennixIndi | Games</title>
+
+  <link rel="shortcut icon" href="assets/theimages/logo.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script>
+    function toggle_Popup() {
+      document.getElementById("popup-1").classList.toggle("active");
+    }
+  </script>
+
+  <style>
+    body {
+      background-image: url('assets/theimages/backgrounds/trees-bg.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  </style>
+
+  <style>
+    .popup .overlay {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 1;
+      display: none;
+    }
+
+    .popup .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      background: #1F1F1F;
+      width: 450px;
+      hight: 220px;
+      z-index: 2;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .popup .close-btn {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      width: 30px;
+      hight: 30px;
+      color: #ffffff font-size: 25px;
+      font-weight: 600;
+      line-hight: 30px;
+      text-align: center;
+      boarder-radius: 50%;
+    }
+
+    .popup.active .overlay {
+      display: block;
+    }
+
+    .popup.active .content {
+      transition: all 300ms ease-in-out;
+      transform: translate(-50%, -50%) scale(0);
+    }
+  </style>
+
+  <style>
+    /* Style The Dropdown Button */
+    .dropbtn {
+      background-color: #2B2B2B;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #404040;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+      background-color: #525252
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {
+      background-color: #313131;
+    }
+  </style>
+
+  <style>
+    @font-face {
+      font-family: SPR;
+      src: url('assets/EightBitDragon.ttf');
+    }
+
+    h1 {
+      font-family: SPR
+    }
+  </style>
+
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Add a gray background color with some padding */
+    footer {
+      background-color: #181818;
+      padding: 25px;
+    }
+
+    .carousel-inner img {
+      width: 100%;
+      /* Set width to 100% */
+      margin: auto;
+      min-height: 200px;
+    }
+
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+    @media (max-width: 600px) {
+      .carousel-caption {
+        display: none;
+      }
+
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="index.html">FennixIndi</a>
+
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="#"><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+          <li class="#"><a href="about.html"><span class="glyphicon glyphicon-inbox"></span> About</a></li>
+          <li class="#"><a href="board.html"><span class="glyphicon glyphicon-signal"></span> Board</a></li>
+          <li class="active"><a href="#"><span class="glyphicon glyphicon-globe"></span> Projects</a></li>
+
+          <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+
+  <div class="float-container">
+    
+  <div><div style="height:100%; width:350px; background-color:black;" >
+    
+            <a href="archive.html"><img src="assets/gif-art/archives.gif" class="img-responsive" style="width:100%"
+                alt=""></a>
+    
+  </div></div>
+
+  <!--Search bar and overview of projects-->
+  
+  <div align="right">
+<div class="search-container">
+  <input type="text" placeholder="Search..." name="search" id="searchprojects">
+  <button type="submit"><span class="glyphicon glyphicon-search"><i class="fa fa-search"></i></span></button>
+</div>
+  
+    <script>
+    document.getElementById("searchprojects").setAttribute('size', '80');
+    </script>
+  </div>
+  </div>
+  
+    
+</body>
+
+</html>
