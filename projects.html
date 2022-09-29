@@ -20,7 +20,7 @@
 
   <style>
     body {
-      background-image: url('assets/theimages/backgrounds/trees-bg.png');
+      background-color: #272727;
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
@@ -196,41 +196,138 @@
     </div>
   </nav>
 
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div class="float1">
+  <div class="container">
+    <div class="search-box">
+      <input type="text" class="search" placeholder="What are you looking for?" id="search-item" onkeyup="search()">
+      <button type="submit" class="search-btn">
+        <span class="glyphicon glyphicon-search">
+        <i class="fa fa-search">
+        </i>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+  
+  <style>
+    .search-box {
+      width: 93%;
+      position: relative;
+    }
+
+    .search {
+      width: 40.7%;
+      border: 3px solid #fd5e53;
+      border-right: none;
+      padding: 5px;
+      height: 40px;
+      outline: none;
+      color: #9dbfaf
+    }
+
+    .search:focus {
+      color: #000;
+      box-shadow: 0 0 5px #fd5e53;
+    }
+
+    .search-btn {
+      width: 40px;
+      height: 36px;
+      border: 1px solid #fd5e53;
+      background: #fd5e53;
+      text-align: center;
+      color: #fff;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    .float1 {
+      float: left;
+    }
+  </style>
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+  <!--Styling for the basics of the page-->
+
+  <style>
+    .float-container {
+      border: 0px solid #fff;
+      padding: 10px;
+    }
+
+    .float-child1 {
+      width: 50%;
+      float: left;
+      padding: 5px;
+      border: 0px solid red;
+    }
+
+    .float-child2 {
+      width: 50%;
+      float: right;
+      padding: 10px;
+      border: 0px solid red;
+    }
+  </style>
+
+  <!--End of the basic Stylesheets-->
+
+  <div class="float-container">
+
+    <div class="float-child1">
+      <div style="height:100%; width:475px; background-color:#272727;" class="green">
+    
+<img src="search.png" onclick="this.src='code.png'" class="img-responsive">
 
 
-  <div class="container text-center" padding: 16px;>
-    <h3 style="color: #ffffff;"></h3><br>
-    <div style="height:100%;width:100%;scroll:overflow;border:0px solid #000000">
-      <center>
-        <div class="row">
-          <div class="col-sm-4">
-            <a href="games.html"><img src="assets/gif-art/games.gif" class="img-responsive" style="width:100%"
-                alt=""></a>
-          </div>
-          <div class="col-sm-4">
-            <a href="archive.html"><img src="assets/gif-art/archives.gif" class="img-responsive" style="width:100%"
-                alt=""></a>
-          </div>
-          <div class="col-sm-4">
-            <img src="assets/gif-art/platforms.gif" class="img-responsive" style="width:100%" alt="">
-          </div>
-        </div>
-      </center>
+    </div>
 
-      <h3 style="color: #ffffff;" padding: 16px;></h3><br>
-      <div style="height:100%;width:100%;scroll:overflow;border:0px solid #000000">
-        <center>
-          <div class="row">
-            <div class="col-sm-4">
-              <img src="assets/gif-art/software.gif" class="img-responsive" style="width:100%" alt="">
-            </div>
-            <div class="col-sm-4">
-              <img src="assets/gif-art/dashboard.gif" class="img-responsive" style="width:100%" alt="">
-            </div>
-          </div>
-        </center>
+    <!--Search bar and overview of projects-->
+
+    <div align="right" class="float-child2">
+      <div class="blue">
+        
       </div>
+    </div>
+  </div>
+  
+  <!------------------------->
+<style>
+  #cf2 {
+  position:relative;
+  height:281px;
+  width:450px;
+  margin:0 auto;
+}
+#cf2 img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
 
+#cf2 img.transparent {
+opacity:0;
+}
+#cf_onclick {
+cursor:pointer;
+}
+</style>
+
+  <script>
+    $(document).ready(function() {
+  $("#cf_onclick").click(function() {
+  $("#cf2 img.top").toggleClass("transparent");
+});
+});
+  </script>
+  <!------------------------->
+    
 </body>
 
 </html>
