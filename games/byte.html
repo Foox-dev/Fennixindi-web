@@ -14,7 +14,7 @@
 
   <style>
     body {
-      background-image: url('/assets/theimages/backgrounds/trees-bg.png');
+      background-color: #272727;
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
@@ -50,6 +50,10 @@
         display: none;
       }
     }
+
+    html::-webkit-scrollbar {
+      width: 0px;
+    }
   </style>
 </head>
 
@@ -79,104 +83,118 @@
     </div>
   </nav>
 
-  <div style="float: left">
 
-    <div>
+  <div>
+    <img src="/banners/stormtides1-banner.png" alt="stormtides-byte" class="img-responsive">
+  </div>
+  <div class="line-section"></div>
+  <div class="bottom-padding"></div>
+  <style>
+    .line-section {
+      border: 1px solid black;
+    }
 
-      <div>
-        <img src="/games/game-art/stormtides-byte-poster.png" alt="stormtides-logo" width="375" height="520">
+    .bottom-padding {
+      border: 0px solid black;
+      padding: 4px;
+    }
+  </style>
+
+  <!----------------Main Web Page---------------------->
+  <section id="container">
+    <div class="left-side" id="float-child1">
+      <center class="description-main">
+        <h3>Hey there everyone!</h3>
+
+        <h3> Do you like spending your free time playing video games? Well, we have the perfect game for you!
+          Introducing
+          StormTides Byte, a small ROM-style text RPG that is very fun and addicting. With many different things that
+          can
+          be achieved, you are guaranteed to have fun.</h3>
+
+        <h3>Updates are given every other week, and with each update is a new adventure. So you will never get bored!
+          This
+          game is only available on Windows, so don't miss your chance.
+        </h3>
+        <h3>Come join the fun and adventure now by purchasing StormTides Byte! Thank you for your time.
+        </h3>
+      </center>
+    </div>
+    <!--------------------------------------------------->
+    <form class="right-side" id="float-child 2" align="right">
+      <div id="padded-price">
+        <h2 class="colored1"> <strong>Product Price:</strong> $00.00 USD</h2>
+
+        <div id="padding1"></div>
+        
+        <button name="button" type="button" class="buttonclass" id="buttonid" href="https://www.google.com/">
+          <center class="glyphicon glyphicon-cloud-download">Download</center>
+        </button>
+
       </div>
 
-      <section>
+    </form>
+  </section>
+  <!--------------------------------------------------->
 
-        <style>
-          /* Style The Dropdown Button */
-          .dropbtn {
-            background-color: #2B2B2B;
-            color: white;
-            padding: 15px;
-            font-size: 16px;
-            width: 375px;
-            border: none;
-            cursor: pointer;
-          }
+  <style>
 
-          /* The container <div> - needed to position the dropdown content */
-          .dropdown {
-            position: relative;
-            display: inline-block;
-          }
 
-          /* Dropdown Content (Hidden by Default) */
-          .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #404040;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-          }
+    #padding1{
+      padding-top: 120px;
+    }
+    
+    #buttonid {
+      background-color: #04AA6D;
+      border: none;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+    }
 
-          /* Links inside the dropdown */
-          .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-          }
+    .buttonclass {
+      border-radius: 15px;
+      width: 370px;
+    }
 
-          /* Change color of dropdown links on hover */
-          .dropdown-content a:hover {
-            background-color: #525252
-          }
+    .description-main {
+      color: #D8D8D8;
+    }
 
-          /* Show the dropdown menu on hover */
-          .dropdown:hover .dropdown-content {
-            display: block;
-          }
+    .left-side {
+      border: 1px solid white;
+      border-radius: 10px;
+      width: 370px;
+      height: 445px;
+      overflow: hidden;
+      overflow-y: scroll;
+    }
 
-          /* Change the background color of the dropdown button when the dropdown content is shown */
-          .dropdown:hover .dropbtn {
-            background-color: #313131;
-          }
-        </style>
+    .colored1 {
+      color: #ffffff;
+      padding-right: 2.5px;
+    }
 
-        <div style="float: center;">
-          <div class="dropdown">
-            <button class="dropbtn">
-              <h3>Digital Product
-                Description</h3>
-            </button>
-            <div class="dropdown-content">
-              <a style="color: #ffffff;">Welcome to StormTides, a menu based open world RPG that will keep you
-                captivated for hours on end. From
-                the
-                moment you begin playing, you'll be enveloped in our mesmerizing game style. And with so much to do in
-                the game, you'll never get bored!</a>
-              <a style="color: #ffffff;">One of the things that makes StormTides unique is our attention to detail.
-                Every aspect of the game has
-                been carefully crafted to provide the best possible experience. For example, we've completely reworked
-                the weapon damage system to make it more realistic and balanced. And our armor durability system ensures
-                that your armor will always be up to the task of protecting you in battle.</a>
-              <a style="color: #ffffff;">Of course, no RPG would be complete without a vast array of customization
-                options. You'll be able to
-                choose from a wide variety of armor and weapons, and you can even customize your character's appearance
-                to suit your own personal taste.</a>
-              <a style="color: #ffffff;">There are two type of this series curently. There is StormTides Unity, which is
-                built in the unity game
-                engine and has higher graphics then the other version. StormTides Byte is the second version. It has
-                been crafted in windows batch script to be optimized to be ran on virtually any computer. </a>
-              <a style="color: #ffffff;">So come on in and explore the world of StormTides! We guarantee you won't be
-                disappointed.</a>
-              </a>
-            </div>
-          </div>
+    #padded-price {
+      padding-right: 60px;
+    }
 
-        </div>
+    .right-side {}
 
-    </div>
-    </section>
-  </div>
+    #float-child1 {
+      float: left;
+    }
+
+    #float-child2 {
+      float: right;
+    }
+
+    
+  </style>
 
 </body>
 
