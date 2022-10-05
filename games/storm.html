@@ -14,7 +14,7 @@
 
   <style>
     body {
-      background-image: url('/assets/theimages/backgrounds/trees-bg.png');
+      background-color: #272727;
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
@@ -79,110 +79,158 @@
     </div>
   </nav>
 
-  <div style="float: left">
 
-    <div>
+  
+  <div>
+    <img src="/banners/stormtides2-banner.png" alt="stormtides-unity" class="img-responsive">
+  </div>
+  <div class="line-section"></div>
+  <div class="bottom-padding"></div>
+  <style>
+    .line-section {
+      border: 1px solid black;
+    }
 
-      <div>
-        <img src="/games/game-art/stormtides-poster.png" alt="stormtides-logo" width="375" height="520">
-      </div>
+    .bottom-padding {
+      border: 0px solid black;
+      padding: 4px;
+    }
+  </style>
 
-      <section>
-
-        <style>
-          /* Style The Dropdown Button */
-          .dropbtn {
-            background-color: #2B2B2B;
-            color: white;
-            padding: 15px;
-            font-size: 16px;
-            width: 375px;
-            border: none;
-            cursor: pointer;
-          }
-
-          /* The container <div> - needed to position the dropdown content */
-          .dropdown {
-            position: relative;
-            display: inline-block;
-          }
-
-          /* Dropdown Content (Hidden by Default) */
-          .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #404040;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-          }
-
-          /* Links inside the dropdown */
-          .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-          }
-
-          /* Change color of dropdown links on hover */
-          .dropdown-content a:hover {
-            background-color: #525252
-          }
-
-          /* Show the dropdown menu on hover */
-          .dropdown:hover .dropdown-content {
-            display: block;
-          }
-
-          /* Change the background color of the dropdown button when the dropdown content is shown */
-          .dropdown:hover .dropbtn {
-            background-color: #313131;
-          }
-        </style>
-
-        <div style="float: center;" align= "center">
-          <div class="dropdown">
-            <button class="dropbtn">
-              <h3>Digital Product
-                Description</h3>
-            </button>
-            <div class="dropdown-content">
-              <a style="color: #ffffff;">Welcome to StormTides, a menu based open world RPG that will keep you
+  <!----------------Main Web Page---------------------->
+  <section id="container">
+    <div class="left-side" id="float-child1">
+      <center class="description-main">
+        <h3>Welcome to StormTides, a menu based open world RPG that will keep you
                 captivated for hours on end. From
                 the
                 moment you begin playing, you'll be enveloped in our mesmerizing game style. And with so much to do in
-                the game, you'll never get bored!</a>
-              <a style="color: #ffffff;">One of the things that makes StormTides unique is our attention to detail.
+                the game, you'll never get bored!</h3>
+
+        <h3> One of the things that makes StormTides unique is our attention to detail.
                 Every aspect of the game has
                 been carefully crafted to provide the best possible experience. For example, we've completely reworked
                 the weapon damage system to make it more realistic and balanced. And our armor durability system ensures
-                that your armor will always be up to the task of protecting you in battle.</a>
-              <a style="color: #ffffff;">Of course, no RPG would be complete without a vast array of customization
+                that your armor will always be up to the task of protecting you in battle.</h3>
+
+        <h3>Of course, no RPG would be complete without a vast array of customization
                 options. You'll be able to
                 choose from a wide variety of armor and weapons, and you can even customize your character's appearance
-                to suit your own personal taste.</a>
-              <a style="color: #ffffff;">There are two type of this series curently. There is StormTides Unity, which is
+                to suit your own personal taste.
+        </h3>
+        <h3>There are two type of this series curently. There is StormTides Unity, which is
                 built in the unity game
                 engine and has higher graphics then the other version. StormTides Byte is the second version. It has
-                been crafted in windows batch script to be optimized to be ran on virtually any computer. </a>
-              <a style="color: #ffffff;">So come on in and explore the world of StormTides! We guarantee you won't be
-                disappointed.</a>
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-
-<div></div>
-        
+                been crafted in windows batch script to be optimized to be ran on virtually any computer.
+        </h3>
+        <h3>
+          So come on in and explore the world of StormTides! We guarantee you won't be
+                disappointed.
+        </h3>
+      </center>
     </div>
-    </section>
-  </div>
+    <!--------------------------------------------------->
+    <form class="right-side" id="float-child 2" align="right">
+      <div id="padded-price">
+        <h2 class="colored1"> <strong>Product Price:</strong> $05.99 USD</h2>
+
+        <div id="padding1"></div>
+        
+       <a href="#"> <button name="button" type="button" class="buttonclass" id="btn" onclick=()>
+          <center>Coming Soon</center>
+        </button> </a>
+
+      </div>
+
+    </form>
+  </section>
+  <!--------------------------------------------------->
+
+  <style>
 
 
+    #padding1{
+      padding-top: 120px;
+    }
+    
+    #btn {
+      background-color: #ba461c;
+      border: none;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      box-shadow: 10px;
+    }
 
+    .buttonclass {
+      border-radius: 15px;
+      width: 370px;
+    }
+
+    .description-main {
+      color: #d8d8d8;
+    }
+
+    .left-side {
+      border: 1px solid white;
+      border-radius: 10px;
+      width: 370px;
+      height: 445px;
+      overflow: hidden;
+      overflow-y: scroll;
+    }
+
+    .colored1 {
+      color: #ffffff;
+      padding-right: 2.5px;
+    }
+
+    #padded-price {
+      padding-right: 60px;
+    }
+
+    .right-side {}
+
+    #float-child1 {
+      float: left;
+    }
+
+    #float-child2 {
+      float: right;
+    }
+
+    .button:hover {
+      background-color:#913206;
+      transition: 0.5s;
+    }
+
+    .button:active {
+      background-color: #913206;
+      transition: 0.5s;
+    }
+    
+  </style>
+
+  <script>
+const btn = document.getElementById('btn');
+
+let index = 0;
+
+const colors = ['#913206'];
+
+btn.addEventListener('click', function onClick() {
+  btn.style.backgroundColor = colors[#ba461c];
+  btn.style.color = 'white';
+
+  index = index >= colors.length - 1 ? 0 : index + 1;
+});
+  </script>
+
+  
 </body>
 
 </html>
