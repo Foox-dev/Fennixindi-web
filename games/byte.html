@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FennixIndi | StormTides Byte</title>
+
+  <link rel="shortcut icon" href="/assets/theimages/logo.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+    body {
+      background-color: #272727;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  </style>
+
+
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+
+
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Add a gray background color with some padding */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+
+    .carousel-inner img {
+      width: 100%;
+      /* Set width to 100% */
+      margin: auto;
+      min-height: 200px;
+    }
+
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+    @media (max-width: 600px) {
+      .carousel-caption {
+        display: none;
+      }
+    }
+
+    html::-webkit-scrollbar {
+      width: 0px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="/index.html">FennixIndi</a>
+
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="#"><a href="/index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+          <li class="#"><a href="/about.html"><span class="glyphicon glyphicon-inbox"></span> About</a></li>
+          <li class="#"><a href="/board.html"><span class="glyphicon glyphicon-signal"></span> Board</a></li>
+          <li><a href="/projects.html"><span class="glyphicon glyphicon-globe"></span> Projects</a></li>
+          <li><a href="/login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div>
+    <img src="/banners/stormtides1-banner.png" alt="stormtides-byte" class="img-responsive">
+  </div>
+  <div class="line-section"></div>
+  <div class="bottom-padding"></div>
+  <style>
+    .line-section {
+      border: 1px solid black;
+    }
+
+    .bottom-padding {
+      border: 0px solid black;
+      padding: 4px;
+    }
+  </style>
+
+  <!----------------Main Web Page---------------------->
+  <section id="container">
+    <div class="left-side" id="float-child1">
+      <center class="description-main">
+        <h3>Hey there everyone!</h3>
+
+        <h3> Do you like spending your free time playing video games? Well, we have the perfect game for you!
+          Introducing
+          StormTides Byte, a small ROM-style text RPG that is very fun and addicting. With many different things that
+          can
+          be achieved, you are guaranteed to have fun.</h3>
+
+        <h3>Updates are given every other week, and with each update is a new adventure. So you will never get bored!
+          This
+          game is only available on Windows, so don't miss your chance.
+        </h3>
+        <h3>Come join the fun and adventure now by purchasing StormTides Byte! Thank you for your time.
+        </h3>
+      </center>
+    </div>
+    <!--------------------------------------------------->
+    <form class="right-side" id="float-child 2" align="right">
+      <div id="padded-price">
+        <h2 class="colored1"> <strong>Product Price:</strong> $00.00 USD</h2>
+
+        <div id="padding1"></div>
+        
+       <a href="https://www.youtube.com/"> <button name="button" type="button" class="buttonclass" id="btn" onclick=()>
+          <center class="glyphicon glyphicon-cloud-download">Download</center>
+        </button> </a>
+
+      </div>
+
+    </form>
+  </section>
+  <!--------------------------------------------------->
+
+  <style>
+
+
+    #padding1{
+      padding-top: 120px;
+    }
+    
+    #btn {
+      background-color: #04AA6D;
+      border: none;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      box-shadow: 10px;
+    }
+
+    .buttonclass {
+      border-radius: 15px;
+      width: 370px;
+    }
+
+    .description-main {
+      color: #D8D8D8;
+    }
+
+    .left-side {
+      border: 1px solid white;
+      border-radius: 10px;
+      width: 370px;
+      height: 445px;
+      overflow: hidden;
+      overflow-y: scroll;
+    }
+
+    .colored1 {
+      color: #ffffff;
+      padding-right: 2.5px;
+    }
+
+    #padded-price {
+      padding-right: 60px;
+    }
+
+    .right-side {}
+
+    #float-child1 {
+      float: left;
+    }
+
+    #float-child2 {
+      float: right;
+    }
+
+    .button:hover {
+      background-color:#026e46;
+      transition: 0.7s;
+    }
+
+    .button:active {
+      background-color: #026e46;
+      transition: 0.7s;
+    }
+    
+  </style>
+
+  <script>
+const btn = document.getElementById('btn');
+
+let index = 0;
+
+const colors = ['#026e46'];
+
+btn.addEventListener('click', function onClick() {
+  btn.style.backgroundColor = colors[index];
+  btn.style.color = 'white';
+
+  index = index >= colors.length - 1 ? 0 : index + 1;
+});
+  </script>
+  
+</body>
+
+</html>

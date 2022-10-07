@@ -4,15 +4,33 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FennixIndi | Our Resources</title>
+  <title>FennixIndi | Board</title>
 
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/theimages/logo.png" type="image/x-icon">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    body {
+      background: -webkit-linear-gradient(25deg, #0518ed,#682ad4, #cf3acc);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  </style>
+
+  <style>
+    @font-face {
+      font-family: SPR;
+      src: url('assets/EightBitDragon.ttf');
+    }
+
+    h1 {
+      font-family: SPR
+    }
+  </style>
 
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */
@@ -23,7 +41,7 @@
 
     /* Add a gray background color with some padding */
     footer {
-      background-color: #f2f2f2;
+      background-color: #181818;
       padding: 25px;
     }
 
@@ -41,16 +59,6 @@
       }
     }
   </style>
-
-  <style>
-    body {
-      background-image: url('theimages/abwall2.png');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: 100% 100%;
-    }
-  </style>
-
 </head>
 
 <body>
@@ -64,15 +72,16 @@
           <span class="icon-bar"></span>
         </button>
 
-        <a class="navbar-brand" href="#">FennixIndi</a>
+        <a class="navbar-brand" href="index.html">FennixIndi</a>
 
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li class="active"><a href="#">Board</a></li>
-          <li><a href="games.html">Games</a></li>
+          <li class="#"><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+          <li class="#"><a href="about.html"><span class="glyphicon glyphicon-inbox"></span> About</a></li>
+          <li class="active"><a href="#"><span class="glyphicon glyphicon-signal"></span> Board</a></li>
+          <li><a href="projects.html"><span class="glyphicon glyphicon-globe"></span> Projects</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
         </ul>
       </div>
     </div>
@@ -80,16 +89,17 @@
 
 
   <h1>
-    <center style="color: #ffffff">Our Board Of Recources</center>
+    <center>
+      <img src="assets/theimages/banner-no-logo.png" class="img-responsive" style="width:35%" alt="banner">
+    </center></a>
   </h1>
-  <div style="height:1%;width:100%;overflow;border:1.7px solid #FFFFFF;"></div>
 
   <h4>
     <p style="color: #000000;">
 
 
       <center>
-        <div style="color: #ffffff;float: center;">
+        <div class="semi-transparent-box" style="color: #ffffff;" float: center;">
 
           <h2>| Contacts |</h2>
           <div>
@@ -172,7 +182,16 @@
     </p>
   </h4>
   </div>
-
+  <style>
+    .semi-transparent-box {
+      border: 0.5px solid rgba(0, 0, 0, 0.5);
+      border-radius: 19px;   
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 2px;
+      color: white;
+      width: 50%;
+    }
+  </style>
 
 
 </body>
