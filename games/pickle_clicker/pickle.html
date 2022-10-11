@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Pickle Clicker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=0.9, user-scalable=no" />
+
+  <script src="https://cdn.jsdelivr.net/npm/numbro@2.3.6/dist/numbro.min.js"></script>
+
+
+  <link rel="shortcut icon" href="/games/game-art/pickles/pickle-fav.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+  <script src="brain.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script>
+
+
+
+  <style>
+    body {
+      background-color: #1D2419;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  </style>
+
+  <style>
+    .image img {
+      transition: all .1s ease-in-out;
+    }
+
+    .image img:hover {
+      transform: scale(1.01);
+    }
+
+    .image img:active {
+      transform: scale(0.99);
+    }
+
+    button {
+      background: #242424;
+      color: #ffffff;
+      border-radius: 10%;
+    }
+
+    .upgrades2 button {
+      background: #242424;
+      color: #ffffff;
+      border-radius: 10%;
+    }
+
+    .numbers {
+      thousandSeparated: true
+    }
+
+    html::-webkit-scrollbar {
+      width: 0px;
+    }
+  </style>
+
+
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Add a gray background color with some padding */
+    footer {
+      background-color: #181818;
+      padding: 25px;
+    }
+
+    .carousel-inner img {
+      width: 100%;
+      /* Set width to 100% */
+      margin: auto;
+      min-height: 200px;
+    }
+
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+    @media (max-width: 600px) {
+      .carousel-caption {
+        display: none;
+      }
+
+    }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="index.html">FennixIndi</a>
+
+      </div>
+      <div class=" collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="#"><a href="/index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+          <li class="#"><a href="/about.html"><span class="glyphicon glyphicon-inbox"></span> About</a></li>
+          <li><a href="/board.html"><span class="glyphicon glyphicon-signal"></span> Board</a></li>
+          <li><a href="/projects.html"><span class="glyphicon glyphicon-globe"></span> Projects</a></li>
+          <li><a href="/login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <body onload="updatecount()">
+    <div align="center">
+      <h1 style="color: #ffffff" ;>Pickle Clicker</h1>
+
+  </body>
+
+  <style>
+    .button {
+      background-color: Transparent;
+      background-repeat: no-repeat;
+      border: none;
+      cursor: pointer;
+      overflow: hidden;
+      padding: 15px 32px;
+    }
+  </style>
+  <h2 id="avg_pickle" style="color: #ffffff" ;>0 Pickles Per Second</h2>
+  <h3 id="pickles" style="color: #ffffff" ;>You have 0 Pickles</h3>
+  <a class="image" onclick="clicker.pickles ++"><img src="/games/game-art/pickles/pickle.png" class="img-responsive"
+      style="width:30%">
+
+    <a onclick="saveGame()">
+      <button>Save Game</button><br><br>
+    </a>
+    <a ondblclick="resetGame()">
+      <br>
+      <button>Restart</button>
+    </a>
+
+    <center>
+      <br>
+      <h3 style="color: #ffffff">Auto Upgrades</h3>
+      <div id="upgrades" class="upgrades" style="color: #ffffff" align="center">
+      </div>
+      </left>
+
+      <br>
+
+      <div id="achievements" align="center" style="width: 400px; height: 500px; color: #ffffff; top; 100%"></div>
+    </center>
+
+</body>
+
+</html>
