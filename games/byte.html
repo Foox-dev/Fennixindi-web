@@ -122,13 +122,14 @@
     <!--------------------------------------------------->
     <form class="right-side" id="float-child 2" align="right">
       <div id="padded-price">
-        <h2 class="colored1"> <strong>Product Price:</strong> $00.00 USD</h2>
+        <h2 class="colored1"> <strong>Product Price:</strong> Free</h2>
 
         <div id="padding1"></div>
-        
-       <a href="https://www.youtube.com/"> <button name="button" type="button" class="buttonclass" id="btn" onclick=()>
-          <center class="glyphicon glyphicon-cloud-download">Download</center>
-        </button> </a>
+
+        <a href="/downlaods/stormtides_byte.zip" download> <button name="button" type="button" class="buttonclass" id="btn"
+            onclick=()>
+            <center class="glyphicon glyphicon-cloud-download">Download</center>
+          </button> </a>
 
       </div>
 
@@ -137,12 +138,10 @@
   <!--------------------------------------------------->
 
   <style>
-
-
-    #padding1{
+    #padding1 {
       padding-top: 120px;
     }
-    
+
     #btn {
       background-color: #04AA6D;
       border: none;
@@ -194,7 +193,7 @@
     }
 
     .button:hover {
-      background-color:#026e46;
+      background-color: #026e46;
       transition: 0.7s;
     }
 
@@ -202,24 +201,23 @@
       background-color: #026e46;
       transition: 0.7s;
     }
-    
   </style>
 
   <script>
-const btn = document.getElementById('btn');
+    const btn = document.getElementById('btn');
 
-let index = 0;
+    let index = 0;
 
-const colors = ['#026e46'];
+    const colors = ['#026e46'];
 
-btn.addEventListener('click', function onClick() {
-  btn.style.backgroundColor = colors[index];
-  btn.style.color = 'white';
+    btn.addEventListener('click', function onClick() {
+      btn.style.backgroundColor = colors[index];
+      btn.style.color = 'white';
 
-  index = index >= colors.length - 1 ? 0 : index + 1;
-});
+      index = index >= colors.length - 1 ? 0 : index + 1;
+    });
   </script>
-  
+
 </body>
 
 </html>
